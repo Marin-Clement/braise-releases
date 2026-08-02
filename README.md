@@ -65,11 +65,9 @@ saisir : l'app lit ce que le jeu t'envoie déjà.
 L'installateur est maison. Il se pose dans ton dossier utilisateur : **aucun droit
 administrateur** n'est demandé, et rien n'est écrit ailleurs que chez toi.
 
-| Installer | Désinstaller |
-|---|---|
-| ![Installateur](captures/installateur.png) | ![Désinstallateur](captures/desinstallateur.png) |
-
-![Installation en cours](captures/installateur-forge.png)
+| Installer | Pendant | Désinstaller |
+|---|---|---|
+| ![Installateur](captures/installateur.png) | ![Installation en cours](captures/installateur-forge.png) | ![Désinstallateur](captures/desinstallateur.png) |
 
 ## Au premier lancement
 
