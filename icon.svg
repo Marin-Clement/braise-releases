@@ -1,13 +1,32 @@
 <!--
-  L'enclume — la marque d'Établi, la MÊME partout : icône de l'app (.icns/.ico),
+  Braise — la marque d'Établi, la MÊME partout : icône de l'app (.icns/.ico),
   barre latérale, écran de bienvenue, et ici le favicon de l'onglet.
 
-  Minimaliste et à plat : un fond anthracite, l'enclume or (les kamas), l'éclat
-  iris (l'XP). Aucun dégradé, aucune lueur. L'enclume dit l'artisanat d'un coup
-  d'œil, là où un monogramme ne disait rien.
+  C'était une enclume. Deux choses la dataient à côté de la mascotte : un éclat
+  à quatre branches, le motif « brillance » le plus générique qui soit, et un
+  ton UNIQUE là où Braise est faite de deux aplats séparés par une frontière
+  nette — ce qui lui donne du volume sans un seul dégradé.
 
-  Ici l'enclume est agrandie (moins de marge que l'icône d'app) : à la taille d'un
-  onglet, il faut qu'elle remplisse, sinon elle tombe sous le pixel.
+  ELLE NE REGARDE PAS. Pas d'yeux, pas de bouche : à seize pixels, deux yeux et
+  une bouche deviennent trois taches, raison pour laquelle la mascotte ne
+  descend jamais sous vingt-deux. Ce qui la rend reconnaissable est sa
+  SILHOUETTE — un corps rond, trois langues inégales, deux qui s'échappent sur
+  les côtés — et c'est elle qui survit à un onglet.
+
+  ─── CE FICHIER EST UNE COPIE, ET IL FAUT LE SAVOIR ────────────────────────────
+
+  Les tracés viennent de `SILHOUETTE` dans `src/components/Braise.tsx`, qui est
+  la seule définition pour le composant et le logo. Ici on ne peut pas
+  l'importer : c'est un statique servi tel quel, sans build. Les deux tons sont
+  donc figés en hexadécimal — #f0a01e est le jeton « color-kamas », #f6bc55 est le même
+  éclairci de 38 % vers #ffe9b0, exactement ce que `CLAIR_BRAISE` calcule.
+
+  Si la silhouette change dans le composant, elle doit être recopiée ici.
+
+  ATTENTION EN ÉCRIVANT CE COMMENTAIRE : deux tirets consécutifs sont INTERDITS
+  dans un commentaire XML. Nommer un jeton CSS avec ses deux tirets de tête a
+  suffi à rendre le fichier illisible — le navigateur n'affiche alors pas
+  d'erreur, il montre une image cassée, et l'onglet retombe sur le globe.
 
   POURQUOI CE FICHIER EST DANS public/ ET PAS DANS app/. Next sert une icône
   déclarée dans `app/` par une route, qui hérite du `force-dynamic` du layout —
@@ -15,14 +34,20 @@
   et l'onglet retombe sur le globe. Depuis `public/`, c'est un statique mis en
   cache normalement, déclaré par `metadata.icons`.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 1024 1024" role="img" aria-label="Établi">
-  <rect width="1024" height="1024" rx="215" fill="#121212"/>
-  <g transform="translate(512 540) scale(1.34) translate(-512 -540)">
-    <g fill="#f0a01e">
-      <path d="M 300 470 L 452 424 Q 470 419 492 419 L 726 419 Q 742 419 742 435 L 742 470 Q 742 486 726 486 L 636 486 Q 612 486 606 508 L 600 528 L 452 528 L 452 486 Q 452 470 300 470 Z"/>
-      <path d="M 470 524 L 578 524 L 556 626 L 492 626 Z"/>
-      <path d="M 388 620 Q 384 620 384 636 L 384 664 Q 384 700 420 700 L 628 700 Q 664 700 664 664 L 664 636 Q 664 620 648 620 Z"/>
-    </g>
-    <path fill="#9f8cf2" d="M 726 300 Q 736 340 776 350 Q 736 360 726 400 Q 716 360 676 350 Q 716 340 726 300 Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="140 120 744 800" role="img" aria-label="Établi">
+  <!-- La flamme est dessinée dans un repère de 24 : on la met à l'échelle et on
+       la centre. Le facteur laisse une marge d'un peu plus d'un dixième, comme
+       l'icône d'app précédente. -->
+  <g transform="translate(512 512) scale(36.5) translate(-12 -11.75)">
+    <!-- Les langues latérales AVANT le corps : elles doivent en dépasser. -->
+    <path fill="#f0a01e" d="M3.9 10.4c-1.4.6-2.1 1.8-2.1 3.5 1.4-.4 2.2-1.6 2.1-3.5Z"/>
+    <path fill="#f0a01e" d="M20.1 10.4c1.4.6 2.1 1.8 2.1 3.5-1.4-.4-2.2-1.6-2.1-3.5Z"/>
+    <circle cx="12" cy="14.9" r="8" fill="#f0a01e"/>
+    <path fill="#f0a01e" d="M12.4 1.1c1.6 3.3 2.6 5.3 2.6 7.3a2.9 2.9 0 0 1-5.8 0c0-2 1.4-3.9 3.2-7.3Z"/>
+    <path fill="#f0a01e" d="M7.1 4.9c1.2 2.4 1.9 3.7 1.9 5.1a1.9 1.9 0 1 1-3.8 0c0-1.4.9-2.7 1.9-5.1Z"/>
+    <path fill="#f0a01e" d="M17 5.4c1.1 2.2 1.7 3.4 1.7 4.7a1.7 1.7 0 1 1-3.4 0c0-1.3.8-2.5 1.7-4.7Z"/>
+    <!-- Le cœur clair, posé en dernier — c'est lui qui fait la flamme. -->
+    <circle cx="12" cy="15.2" r="6" fill="#f6bc55"/>
+    <path fill="#f6bc55" d="M12.3 5.4c1.1 2.3 1.8 3.6 1.8 5a2 2 0 0 1-4 0c0-1.4 1-2.7 2.2-5Z"/>
   </g>
 </svg>
