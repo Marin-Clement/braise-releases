@@ -1,7 +1,12 @@
-# Établi, téléchargements
+<img src="icon.svg" width="76" alt="">
+
+# Braise, téléchargements
 
 **L'atelier qui compte.** Aide à la décision pour l'artisanat de Dofus 3 : ce qu'il
 faut fabriquer, ce qu'il faut ramasser, et ce que ça rapporte vraiment.
+
+Braise est la veilleuse de l'atelier : elle lit ce que le jeu envoie, remplit
+l'app pendant que tu joues, et prévient quand quelque chose se casse.
 
 **[Télécharger la dernière version](../../releases/latest)**
 
@@ -56,9 +61,9 @@ saisir : l'app lit ce que le jeu t'envoie déjà.
 
 | Ton système | Le fichier |
 |---|---|
-| Windows | `Etabli-<version>-win-x64-setup.exe`, l'installateur |
-| Windows, sans installer | `Etabli-<version>-win-x64.zip`, à dézipper, portable |
-| macOS (Apple Silicon) | `Etabli-<version>-arm64.dmg` |
+| Windows | `Braise-<version>-win-x64-setup.exe`, l'installateur |
+| Windows, sans installer | `Braise-<version>-win-x64.zip`, à dézipper, portable |
+| macOS (Apple Silicon) | `Braise-<version>-arm64.dmg` |
 
 ## L'installation
 
@@ -78,7 +83,7 @@ amis, pas un logiciel commercial. Chaque système s'en méfie une fois :
   complémentaires** → **Exécuter quand même**.
 - **macOS** : au premier lancement, **Réglages Système › Confidentialité et
   sécurité** → **Ouvrir quand même**. Si macOS dit que l'app est « endommagée »,
-  c'est la quarantaine : `xattr -cr "/Applications/Établi.app"`.
+  c'est la quarantaine : `xattr -cr "/Applications/Braise.app"`.
 
 ## Le mode live
 
